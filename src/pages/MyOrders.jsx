@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
-import { getOrderById, getOrders } from '../api/ordersService'
-import { useState } from "react";
+import { useState ,useEffect} from "react";
+
 import Order from "../component/Order";
-import { useEffect } from "react";
+import { getOrderById, getOrders } from '../api/ordersService'
 
 
 const MyOrders = ({ status }) => {
@@ -41,7 +41,7 @@ const MyOrders = ({ status }) => {
     return (<>
 
         <ul style={{ marginTop: "5%" }}>
-            <h1 style={{ color: "white", textAlign: "left",marginLeft:"11%",fontSize:"2rem" }}>
+            <h1 style={{ color: "white", textAlign: "left", marginLeft: "11%", fontSize: "2rem" }}>
                 {status === "One" ? <span>- My</span> : <span>- All</span>} orders -
             </h1>
             {orders.map(item => (

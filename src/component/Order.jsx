@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Card, CardContent, Typography, List, ListItem, Divider } from "@mui/material";
+
 import CourseInOrder from "./CourseInOrder";
 
 const Order = ({ order }) => {
@@ -8,7 +9,7 @@ const Order = ({ order }) => {
     return (
         <Card sx={{ width: "80%", mx: "auto", my: 2, p: 2, boxShadow: 3, borderRadius: 2 }}>
             <CardContent sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-               
+
                 <Typography>
                     date: {order.date.substring(0, 10)}
                 </Typography>

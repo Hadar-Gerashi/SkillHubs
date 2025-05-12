@@ -30,7 +30,7 @@ const StepperInput = ({ value, course, step = 1, min = 1, max = 5, onChange }) =
         variant="outlined"
         onClick={handleDecrease}
         disabled={count <= min}
-        sx={{ minWidth: "30px", width: "30px", height: "30px", color: "black", border: "none", borderRight: "1px solid #ccc",borderRadius:"2px" }}
+        sx={{ minWidth: "30px", width: "30px", height: "30px", color: "black", border: "none", borderRight: "1px solid #ccc", borderRadius: "2px" }}
       >
         -
       </Button>
@@ -41,7 +41,7 @@ const StepperInput = ({ value, course, step = 1, min = 1, max = 5, onChange }) =
         variant="outlined"
         onClick={handleIncrease}
         disabled={count >= max}
-        sx={{ minWidth: "30px", width: "30px", height: "30px", color: "black", border: "none", borderLeft: "1px solid #ccc",borderRadius:"2px"  }}
+        sx={{ minWidth: "30px", width: "30px", height: "30px", color: "black", border: "none", borderLeft: "1px solid #ccc", borderRadius: "2px" }}
       >
         +
       </Button>

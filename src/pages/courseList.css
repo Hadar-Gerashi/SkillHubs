@@ -1,14 +1,10 @@
-
 .pagination-numbers {
-  color: white; /* משנה את צבע המספרים ללבן */
+  color: white; 
 }
 
-
-/* שינוי צבע החיצים */
 .pagination-arrows {
-  color: white; /* משנה את צבע החיצים ללבן */
+  color: white; 
 }
-
 
 .breadcrumb-container {
   margin-top: 105px;
@@ -29,8 +25,6 @@
 .breadcrumb-link + .breadcrumb-link {
   margin-left: 5px;
 }
-
-
 
 .breadcrumb-arrow {
   color: white;

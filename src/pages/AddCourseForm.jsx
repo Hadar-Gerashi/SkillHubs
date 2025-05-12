@@ -2,31 +2,28 @@ import { Card, Input, Stack, Textarea, Group, Button, Steps } from "@chakra-ui/r
 import { useForm, useFieldArray, Controller } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import Select from 'react-select';
+import * as React from "react";
+import Alert from "@mui/material/Alert";
+import Grow from "@mui/material/Grow";
+import { useEffect } from "react";
 import { Flex } from "@chakra-ui/react";
+
 
 import {
   StepsItem,
   StepsList,
   StepsNextTrigger,
   StepsPrevTrigger,
-  StepsRoot,
 } from "../components/ui/steps";
 import { Field } from "../components/ui/field";
 import { addCourse, updateCourse } from "../api/courseService.js";
 import { updateCourseInCart } from '../features/cartSlice.js'
-import { AddImage } from '../component/AddImage'
 import './addCourseForm.css'
-import * as React from "react";
-import Alert from "@mui/material/Alert";
-import Collapse from "@mui/material/Collapse";
-import Grow from "@mui/material/Grow";
-import Fade from "@mui/material/Fade";
-import { useEffect } from "react";
+
 import { addImage } from '../api/courseService.js'
-import { Upload } from "@mui/icons-material";
 
 
 
@@ -96,7 +93,7 @@ const AddCourseForm = () => {
   ];
   const [image, setImage] = useState(null);
 
-  const [preview, setPreview] = useState(details?.course?.img ? `https://skillhub-1-a27y.onrender.com/uploads/${details.course.img}` : ""); // כתובת התמונה לתצוגה
+  const [preview, setPreview] = useState(details?.course?.img ? `https://res.cloudinary.com/dc583pymo/image/upload/v1745307156/uploads/${details.course.img}` : ""); // כתובת התמונה לתצוגה
 
 
   useEffect(() => {
@@ -128,18 +125,16 @@ const AddCourseForm = () => {
     const formDa = new FormData();
     formDa.append("image", image);
     setNameImage(image.name)
-    alert(image.name)
+    // alert(image.name)
 
     try {
       const response = await addImage(formDa)
-      // alert("תמונה הועלתה בהצלחה!");
       console.log("הקובץ נשמר ב:", response.data.filePath);
       localStorage.removeItem("selectedImage");
       localStorage.removeItem("selectedImageName");
 
     } catch (error) {
       console.error("שגיאה בהעלאה:", error);
-      // alert("שגיאה בהעלאת התמונה!");
     }
   };
 
@@ -168,12 +163,7 @@ const AddCourseForm = () => {
   };
 
   const prevStep = async () => {
-
     setStep((prev) => prev - 1);
-
-
-
-    // setStep((prev) => prev - 1);
   };
 
 
@@ -185,11 +175,7 @@ const AddCourseForm = () => {
     const currentStepData = getValues();
     let locations = currentStepData.locations.map(item => item.location)
     let categories = currentStepData.categories.map(item => item.value)
-    // let data = { ...formData, locations, categories, img: image.name }
-
-
-    // console.log("Final Form Data:", data);
-
+    // console.log(image.name)
     if (status === "EDIT") {
 
       let img;
@@ -197,7 +183,7 @@ const AddCourseForm = () => {
         img = image.name
 
         handleUpload()
-      
+
       }
       else
         img = details.course.img
@@ -249,8 +235,6 @@ const AddCourseForm = () => {
         <h1 className="title">{status === "EDIT" ? "- UPDATE " : "- ADD "}COURSE -</h1>
         <div style={{
           padding: "10px",
-
-          // top: "18%",
           left: 0,
           width: '100%',
         }}>
@@ -354,9 +338,6 @@ const AddCourseForm = () => {
                       })}
                       min={new Date(new Date().setDate(new Date().getDate() + 1)).toISOString().split('T')[0]} // הגדרת מינימום לתאריך של מחר
                     />
-                    {/* {errors.openingDate && (
-                      <span className="error-message">{errors.openingDate.message}</span>
-                    )} */}
                   </Field>
 
                   <Field label="Course Length">
@@ -369,7 +350,6 @@ const AddCourseForm = () => {
                         max: { value: 50, message: "long must be max 50" },
                       })}
                     />
-                    {/* {errors.long && <span className="error-message">{errors.long.message}</span>} */}
                   </Field>
 
                   <Field label="Price">
@@ -382,7 +362,6 @@ const AddCourseForm = () => {
                           parseFloat(value) > 200 ? true : "Price must be above 200",
                       })}
                     />
-                    {/* {errors.price && <span className="error-message">{errors.price.message}</span>} */}
                   </Field>
                 </Stack>
                 <div className="error-container">
@@ -411,7 +390,6 @@ const AddCourseForm = () => {
         {step === 2 && (
           <form
             onSubmit={(e) => e.preventDefault()}
-          // style={{ display: "flex", justifyContent: "center", marginTop: "3%", marginLeft: "38%" }}
           >
 
             <Card.Root className="step2">
@@ -425,7 +403,6 @@ const AddCourseForm = () => {
                 <Flex gap={2} padding="30px" marginBottom="-50px">
 
                   <Field label="Image" flex={2}>
-                    {/* <AddImage setNameImage={setNameImage} deafultImg={status === "EDIT" ? details.course.img : ""} /> */}
                     <div style={{ textAlign: "center", padding: "20px" }}>
                       <label htmlFor="file-upload" style={{ cursor: "pointer", backgroundColor: "white", color: "black", marginLeft: "-50px", padding: "10px 20px", borderRadius: "5px" }}>
                         Choose file
@@ -453,7 +430,7 @@ const AddCourseForm = () => {
                           <img src={preview} alt="Preview" style={{ maxWidth: "100%", maxHeight: "100%" }} />
                         </div>
                       )}
-                      {/* <button onClick={handleUpload}>upload image</button> */}
+              
                     </div>
                   </Field>
 

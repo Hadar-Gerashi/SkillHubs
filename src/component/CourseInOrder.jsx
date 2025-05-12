@@ -4,9 +4,6 @@ import { useDispatch } from "react-redux";
 import { removeFromCart } from '../features/cartSlice.js'
 import './course.css'
 
-
-
-
 //קומפוננטה להצגת קורס בודד ברשימת ההזמנות
 const CourseInOrder = ({ course, onDelete }) => {
     let dispatch = useDispatch()
@@ -21,7 +18,7 @@ console.log(course)
         <tr key={course._id}>
             <td style={{ padding: '10px', width: '50%', height: "100px" }}>
                 <div style={{ display: "flex", gap: "12px", width: "100%" }}>
-                    <img src={`../dist/images/${course.img}`} width="100px" height="100px" alt={course.name} />
+                    <img src={`https://res.cloudinary.com/dc583pymo/image/upload/v1745307156/uploads/${course?.img}`} width="100px" height="100px" alt={course.name} />
                     <div style={{ display: 'flex', flexDirection: 'column' }}>
                         <strong style={{ marginBottom: "8px" }} >{course.name}</strong>
                         <p style={{ fontSize: "12px" }}><b> Open Date:</b> {course?.openingDate.substring(0, 10)}</p>

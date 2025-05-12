@@ -5,12 +5,14 @@ const updateLocalStorage = (state) => {
     localStorage.setItem('sum', state.sum)
     localStorage.setItem('count', state.count)
 }
+
 const initialState = {
     arr: JSON.parse(localStorage.getItem('cart')) || [],
     sum: JSON.parse(localStorage.getItem('sum')) || 0,
     count: JSON.parse(localStorage.getItem('count')) || 0,
     drawerIsOpen: false
 }
+
 const cartSlice = createSlice({
     name: "cart",
     initialState,
@@ -29,7 +31,7 @@ const cartSlice = createSlice({
             }
             else {
                 if (state.arr[index].qty != 5) {
-                    alert(state.arr[index].checked)
+                    // alert(state.arr[index].checked)
                     if (state.arr[index].checked == false) {
                         state.arr[index].checked = true
                         state.sum += (state.arr[index].price * state.arr[index].qty);
@@ -64,14 +66,13 @@ const cartSlice = createSlice({
             updateLocalStorage(state)
 
         },
-
         increaseQty: (state, action) => {
 
             let index = state.arr.findIndex(course => course._id == action.payload._id)
             state.arr[index].qty += 1
             if (state.arr[index].checked == true) {
                 state.sum += action.payload.price;
-                state.count+= 1;
+                state.count += 1;
             }
             console.log({ ...state.arr[index] })
             updateLocalStorage(state)
@@ -117,11 +118,7 @@ const cartSlice = createSlice({
             state.arr[index] = copy
             state.sum += (state.arr[index].price * state.arr[index].qty);
             state.count += state.arr[index].qty;
-
             updateLocalStorage(state)
-
-
-
         },
 
 
@@ -132,7 +129,7 @@ const cartSlice = createSlice({
 
 
 
-export const { increaseQty,checkboxAdd, checkboxRemove, updateCourseInCart, deleteCart, decreaseQty, addToCart, removeFromCart, isOpenDrawer } = cartSlice.actions
+export const { increaseQty, checkboxAdd, checkboxRemove, updateCourseInCart, deleteCart, decreaseQty, addToCart, removeFromCart, isOpenDrawer } = cartSlice.actions
 export default cartSlice.reducer
 
 

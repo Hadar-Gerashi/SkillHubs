@@ -1,6 +1,7 @@
 import React from 'react';
-import './footer.css';
 import { FaFacebook, FaTwitter, FaYoutube, FaMedium } from 'react-icons/fa';
+
+import './footer.css';
 
 function Footer() {
   return (
@@ -8,7 +9,7 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <img src="../dist/images/hh.png" alt="hh" width="150px" height="120px"  />
+            <img src="../dist/images/hh.png" alt="hh" width="150px" height="120px" />
 
             <p className="footer-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer

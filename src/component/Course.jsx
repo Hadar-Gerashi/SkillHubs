@@ -39,7 +39,9 @@ const Course = ({ course, onDelete,type ,setIsCourse}) => {
                 objectFit="cover"
                 width="30%"
                 height="246px"
-                src={`https://skillhub-1-a27y.onrender.com/uploads/${course?.img}`}
+                // src={`https://skillhub-1-a27y.onrender.com/uploads/${course?.img}`}
+                // https://res.cloudinary.com/dc583pymo/image/upload/v1745307156/uploads/p1.jpg
+                  src={`https://res.cloudinary.com/dc583pymo/image/upload/v1745307156/uploads/${course?.img}`}
                 alt={`${course?.name} image`}
             />
 
@@ -98,109 +100,4 @@ const Course = ({ course, onDelete,type ,setIsCourse}) => {
 };
 
 export default Course;
-
-// import { Badge, Box, Button, HStack, Text, Flex } from "@chakra-ui/react";
-// import * as React from "react";
-// import "./course.css";
-// import { Link, useNavigate } from "react-router-dom";
-// import { useDispatch, useSelector } from "react-redux";
-// import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-// import DriveFileRenameOutlineOutlinedIcon from "@mui/icons-material/DriveFileRenameOutlineOutlined";
-// import AlertDialog from "./AlertDialog";
-// import { addToCart, isOpenDrawer, removeFromCart } from "../features/cartSlice";
-
-// const Course = ({ course, onDelete }) => {
-//   let dispatch = useDispatch();
-//   let navigate = useNavigate();
-//   let user = useSelector((state) => state.users.currentUser);
-
-//   const deleted = async () => {
-//     try {
-//       await deleteCourse(course._id, user?.token);
-//       onDelete(course._id);
-//       dispatch(removeFromCart(course._id));
-//     } catch (ex) {
-//       if (ex.response.status == 401) navigate("/login");
-//       console.log(ex);
-//       alert(ex.response.data.message);
-//     }
-//   };
-
-//   return (
-//     <Box maxW="360px" height="250px" borderRadius="lg" overflow="hidden" position="relative" boxShadow="lg">
-//       {/* תמונת הרקע */}
-
-
-   
-//       <Box
-//         height="250px"
-
-//         backgroundImage={`url('https://courses-fig4.onrender.com/uploads/${course.img}')`}
-//         backgroundSize="cover"
-//         backgroundPosition="center"
-//         position="relative"
-//         borderRadius="lg"
-//       >
-//         <Box
-//           position="absolute"
-//           top={0}
-//           left={0}
-//           right={0}
-//           bottom={0}
-//           background="linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3))"
-//         />
-//       </Box>
-
-//       {/* טקסט מיושר לשמאל */}
-//       <Flex
-//         position="absolute"
-//         top="0"
-//         left="0"
-//         width="100%"
-//         height="100%"
-//         flexDirection="column"
-//         justifyContent="center"
-//         align="flex-start"
-//         p={6}
-//         color="white"
-//       >
-//         <Text fontSize="2xl" fontWeight="bold">{course.name.toUpperCase()}</Text>
-//         <Text fontSize="14px" mt={2} fontWeight="bold" textAlign="left">{course.motivation}</Text>
-//         <Flex mt={3} align="center">
-//           {course.categories.map((cat) => (
-//             <Badge key={cat} backgroundColor="white" colorScheme="blue" mr={2}>
-//               {cat}
-//             </Badge>
-//           ))}
-//         </Flex>
-        
-//         <Flex mt={4} align="center" gap={3}>
-//           <Button size="sm" colorScheme="whiteAlpha" backgroundColor="white" variant="outline" as={Link} to={"details/" + course._id}>
-//             SHOW DETAILS
-//           </Button>
-//           <Button
-//             size="sm"
-//     border="none"
-//             variant="outline"
-//             onClick={() => {
-//               dispatch(addToCart(course));
-//               dispatch(isOpenDrawer(true));
-//             }}
-//           >
-//             <AddShoppingCartIcon sx={{ color: "white" }} />
-//           </Button>
-//           {user?.role == "ADMIN" && <AlertDialog deleted={deleted} />}
-//           {user?.role == "ADMIN" && (
-//             <Button size="sm" colorScheme="whiteAlpha" color="white" variant="outline" border="none" onClick={() => navigate(`/edit/${course._id}`, { state: { status: "EDIT", details: { course } } })}>
-//               <DriveFileRenameOutlineOutlinedIcon />
-//             </Button>
-//           )}
-//         </Flex>
-//       </Flex>
-//     </Box>
-//   );
-// };
-
-// export default Course;
-
 

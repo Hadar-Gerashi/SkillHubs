@@ -2,6 +2,8 @@ import axios from 'axios'
 
 const baseUrl = "https://skillhub-1-a27y.onrender.com/api/course"
 const baseUrlUpload = "https://skillhub-1-a27y.onrender.com/upload"
+// const baseUrlUpload = "http://localhost:8000/upload"
+
 
 
 
@@ -36,6 +38,7 @@ export const addCourse = (course, token) => {
     })
 }
 
+// עדכון קורס
 export const updateCourse = (course, updateCourse, token) => {
     return axios.put(`${baseUrl}/${course._id}`, updateCourse, {
         headers: {
@@ -44,14 +47,16 @@ export const updateCourse = (course, updateCourse, token) => {
     })
 }
 
+// קבלת מספר העמודים שיש באתר
 export const getTotalPages = () => {
     return axios.get(`${baseUrl}/getCount/?limit=12`)
 }
 
+// הוספת תמונה לשרת
 export const addImage = (data) => {
     return axios.post(baseUrlUpload, data, {
         headers: { "Content-Type": "multipart/form-data" },
-      })
+    })
 }
 
 

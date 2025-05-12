@@ -2,7 +2,6 @@
     margin-bottom: 20px;
 }
 
-
 .post {
   position: relative;
   width: 500px;
@@ -42,7 +41,6 @@
   top: 50px;
   left: 30px;
   color: white;
-  /* font-family: sans-serif; */
 }
 
 .post .text h1 {

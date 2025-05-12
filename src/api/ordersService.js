@@ -1,6 +1,5 @@
 import axios from 'axios'
 
-// const baseUrl = "https://courses-fig4.onrender.com/api/order"
 const baseUrl = "https://skillhub-1-a27y.onrender.com/api/order"
 
 //אפשרות להוספת הזמנה

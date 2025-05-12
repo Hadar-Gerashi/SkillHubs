@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './CourseCarousel.css'; 
-import { getAllCourses } from '../api/courseService.js';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+
+import './CourseCarousel.css'; 
+import { getAllCourses } from '../api/courseService.js';
 
 const CourseCarousel = () => {
   const [startIndex, setStartIndex] = useState(0);
@@ -63,7 +64,8 @@ const CourseCarousel = () => {
               onMouseLeave={handleCourseLeave}
             >
               <img
-                src={`https://skillhub-1-a27y.onrender.com/uploads/${course.img}`}
+               src={`https://res.cloudinary.com/dc583pymo/image/upload/v1745307156/uploads/${course?.img}`}
+                // src={`https://skillhub-1-a27y.onrender.com/uploads/${course.img}`}
                 alt={course.title}
                 className="course-image"
               />

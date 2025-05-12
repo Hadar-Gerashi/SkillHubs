@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: repeat(3,1fr);
   padding: 170px;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('../dist/images/r3.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('../images/yy.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

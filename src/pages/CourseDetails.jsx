@@ -64,7 +64,7 @@ export const CourseDetails = () => {
 
       <div className="course-container">
 
-        <img className="image-show" src={`https://skillhub-1-a27y.onrender.com/uploads/${course?.img}`} alt={course?.name} />
+        <img className="image-show"  src={`https://res.cloudinary.com/dc583pymo/image/upload/v1745307156/uploads/${course?.img}`} alt={course?.name} />
 
         {/* טקסט בצד ימין */}
         <div className="course-content">

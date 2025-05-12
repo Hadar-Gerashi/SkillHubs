@@ -44,14 +44,14 @@ function NavBar() {
       height: "65px",
       backdropFilter: "blur(10px)",
     }}>
-    
-      <Container maxWidth="xl">
-      
- 
-        <Toolbar disableGutters>
- <img src="../dist/images/hh.png" alt="hh" width="150px" height="120px"  />
 
-          <Box sx={{ flexGrow: 1, display: "flex", height: "55px" ,marginTop:"-15px"}}>
+      <Container maxWidth="xl">
+
+
+        <Toolbar disableGutters>
+          <img src="../dist/images/hh.png" alt="hh" width="150px" height="120px" />
+
+          <Box sx={{ flexGrow: 1, display: "flex", height: "55px", marginTop: "-15px" }}>
             <Tabs value={currentTab} onChange={handleChange} textColor="secondary" indicatorColor="secondary" sx={{
               '& .MuiTabs-indicator': { backgroundColor: 'white' },
               '& .MuiTab-root': { color: 'white', minWidth: "120px", mx: 1 },
@@ -70,9 +70,9 @@ function NavBar() {
                       component={Link} // מאפשר ל-Tab להתנהג כמו Link 
                       to={page} // הנתיב של הלינק
                       sx={{
-                      
+
                         "&.Mui-selected": {
-                       
+
                           fontWeight: "bold", // אפשר להדגיש את הכיתוב
                           borderRadius: "10px" // עיצוב מעוגל מעט
                         }
@@ -85,7 +85,7 @@ function NavBar() {
           </Box>
 
           {user && (
-            <Box sx={{ flexGrow: 0 ,marginTop:"-15px"}}>
+            <Box sx={{ flexGrow: 0, marginTop: "-15px" }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar sx={{ bgcolor: "white", color: "black" }}>

@@ -3,48 +3,31 @@
     justify-content: center;
     align-items: center;
     height: 120vh;
-    background-image: 
-        linear-gradient( rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5)),
-        url('/images/login.jpg');
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://res.cloudinary.com/dc583pymo/image/upload/v1745307156/uploads/login.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* .card-login{
-    position: absolute;
-    top: 160px;
-    left: 35%;
-    width: 430px;
-    min-height: 65vh; 
-    background: rgba(0, 0, 0, 0.322);
-    color: white;
-    border-radius: 10px;
-    border: none;
- 
-    overflow: auto; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-} */
-.input-login{
-    /* background: white; */
-    border:"5px solid teal";
-    color:white
-    /* color: black; */
-    
-
+.input-login {
+    border: "5px solid teal";
+    color: white
 }
+
 .chakra-icon {
     color: white !important;
 }
+
 textarea:focus,
 input:focus {
-  outline: none;
-  border: 2px solid #ffffff; /* צבע כחול מודגש */
-  box-shadow: 0 0 10px rgba(196, 198, 200, 0.5); /* אפקט זוהר עדין */
-  transition: all 0.3s ease-in-out;
+    outline: none;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px rgba(196, 198, 200, 0.5);
+    transition: all 0.3s ease-in-out;
 }
+
 .card-login {
     position: absolute;
     top: 130px;
@@ -55,8 +38,7 @@ input:focus {
     color: white;
     border-radius: 10px;
     border: none;
-    transition: min-height 0.3s ease-in-out; /* אנימציה חלקה */
-    /* padding: 20px; */
+    transition: min-height 0.3s ease-in-out;
 }
 
 .error-container {
@@ -68,7 +50,6 @@ input:focus {
 .error-message {
     font-size: 14px;
     color: white;
-    /* background: rgba(255, 0, 0, 0.8); */
     padding: 8px 12px;
     border-radius: 5px;
     text-align: center;
@@ -76,12 +57,13 @@ input:focus {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
-
-
-
-
-

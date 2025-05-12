@@ -6,6 +6,7 @@ import { Outlet } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import CircularProgress from '@mui/material/CircularProgress';
 import * as React from 'react';
+import { useLocation } from 'react-router-dom';
 
 import {
     PaginationItems,
@@ -20,8 +21,7 @@ import DrawerCart from '../component/DrawerCart.jsx';
 import Loading from '../component/Loading';
 import './courseList.css'
 import Footer from '../component/Footer';
-import { debounce } from 'lodash';
-import { useLocation } from 'react-router-dom';
+
 
 
 
@@ -48,9 +48,6 @@ const CoursesList = ({ type }) => {
             setIsCourse(""); // מאפס את isCourse רק אם הניווט הוא לעמוד הקורסים
         }
     }, [location.pathname]);
-
-
-
 
 
 

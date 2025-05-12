@@ -1,164 +1,35 @@
-/* 
-.checkout-container {
-    width: 500px;
-    margin: 120px auto;
-    padding: 30px;
-    border-radius: 8px;
-    background: #f9f9f9; 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    text-align: left;
-    color: black;
-  }
-  
-
-  .checkout-title {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: black;
-    border-bottom: 2px solid white; 
-    padding-bottom: 10px;
-  }
-  
-
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 1rem;
-    color: black;
-  }
-  
-
-  .form-control {
-    width: 100%;
-    padding: 12px 16px;
-    border-radius: 4px;
-    border: none;
-    background-color: #333;
-    color: #fff;
-    font-size: 1rem;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
-    transition: box-shadow 0.3s ease;
-  }
-  
-
-  
- 
-
-  .input-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .input-icon {
-    position: absolute;
-    right: 16px;
-    color: #aaa;
-    font-size: 1.2rem;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-
-  .form-row {
-    display: flex;
-    gap: 20px;
-  }
-
-  .form-group.half {
-    flex: 1;
-  }
-  
-
-  .pay-button {
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 4px;
-    background-color: black;
-    color: white;             
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-  }
-  
-  .pay-button:hover {
-    background-color: #e6e6e6c4;
-    color: black;
-  }
-  
-
-  .error-message {
-  
-    font-size: 0.85rem;
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
-  }
-  
-  .error-message svg {
-    margin-right: 5px;
-  }
-   */
-
 .form-checkout {
   margin-top: 10%;
   background-color: #f9f9f9;
   border: "1px solid #f9f9f9";
   align-items: center;
-  /* height: 140vh; */
   width: 300px;
-  min-height:400px;
+  min-height: 400px;
 }
-
-
-
-
-
 .form-row {
   display: flex;
   gap: 20px;
 }
-
-.btn-checkout{
+.btn-checkout {
   background-color: black;
   color: white;
-width:250px;
+  width: 250px;
 }
-
-
-
-/* עיצוב כללי של שדה הקלט */
 .input-wrapper {
-  position: relative; /* כדי שנוכל למקם את האייקון בתוך השדה */
+  position: relative;
 }
-
 .input-checkout {
- 
-  color: black; /* טקסט לבן */
-  border: 1px solid black; /* מסגרת שחורה תמיד */
-  padding: 10px 10px 10px 15px; /* פדינג שמניח מקום לאייקון אם יש */
+  color: black;
+  border: 1px solid black;
+  padding: 10px 10px 10px 15px;
   border-radius: 5px;
   width: 100%;
   box-sizing: border-box;
-  
 }
-
-
 .input-icon {
   position: absolute;
-  right: 10px;  /* ימינה */
-  top: 50%;  /* במרכז אנכי */
-  transform: translateY(-50%); /* יישור אייקון במרכז */
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   color: black;
 }
-
-

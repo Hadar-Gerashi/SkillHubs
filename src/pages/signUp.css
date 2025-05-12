@@ -3,15 +3,15 @@
     justify-content: center;
     align-items: center;
     height: 130vh;
-    background-image: 
-        linear-gradient( rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5)),
-        url('/images/login.jpg');
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://res.cloudinary.com/dc583pymo/image/upload/v1745307156/uploads/login.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.card-signup{
+.card-signup {
     position: absolute;
     top: 110px;
     left: 35%;
@@ -21,18 +21,15 @@
     color: white;
     border-radius: 10px;
     border: none;
-    transition: min-height 0.3s ease-in-out; /* אנימציה חלקה */
-
+    transition: min-height 0.3s ease-in-out;
 }
-.input-signup{
 
+.input-signup {
     background: transparent;
-    /* border:"1px solid teal"; */
-    color:white
-
+    color: white
 }
 
-.git{
+.git {
     height: 200px;
     background-color: blue;
 }
@@ -55,7 +52,13 @@
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

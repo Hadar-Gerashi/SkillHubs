@@ -16,8 +16,6 @@ const userSlice = createSlice({
             state.currentUser = null;
             localStorage.setItem('currentUser', JSON.stringify(state.currentUser))
         }
-
-
     }
 })
 

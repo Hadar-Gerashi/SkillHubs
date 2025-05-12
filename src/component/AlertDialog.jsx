@@ -53,7 +53,7 @@ export default function AlertPopover(props) {
           <Button onClick={props.deleted} color="error" autoFocus>
             Delete
           </Button>
-          
+
         </div>
       </Popover>
     </React.Fragment>

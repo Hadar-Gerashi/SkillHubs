@@ -11,7 +11,7 @@ const coursesSlice = createSlice({
     reducers: {
         setCourses: (state, action) => {
             state.arr = action.payload;
-        },
+        }
     }
 })
 

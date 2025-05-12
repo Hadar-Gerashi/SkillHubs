@@ -53,7 +53,7 @@ export default function DrawerCart() {
                 {cartItems.map((item) => (
                     <div key={item._id} style={{ padding: '15px', display: 'flex', alignItems: 'center', marginBottom: '2px', paddingBottom: '15px', borderBottom: '1px solid #ddd', marginLeft: "-15px" }}>
                         <IsChecked course={item} checked={item.checked} dis={false} />
-                        <img src={`../dist/images/${item.img}`} alt={item.name} style={{ width: '80px', height: '90px', marginRight: '15px', borderRadius: "5px" }} />
+                        <img  src={`https://res.cloudinary.com/dc583pymo/image/upload/v1745307156/uploads/${item?.img}`} alt={item.name} style={{ width: '80px', height: '90px', marginRight: '15px', borderRadius: "5px" }} />
                         <div>
                             <div style={{ fontWeight: 'bold', marginBottom: '5px' }}>{item.name}</div>
                             <div>Quantity: {item.qty}</div>

@@ -5,45 +5,24 @@
   right: 0;
   bottom: 0;
   background-color: rgb(14, 13, 13);
-   
-   /* background: linear-gradient(120deg, #1a1a1a, #0a0a0a, #3d3b3b); */
-   /* background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat; */
-   /* height: 350vh; */
-
   z-index: 10;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: space-between; */
-  /* gap: 50px; */
-  /* padding: 50px; */
-  /* max-width: 1200px; */
   margin: 0 auto;
-  /* background-color: rgba(240, 248, 255, 0); */
-
-  
- 
 }
 
 .image-show {
   margin-top: 2%;
   margin-right: 5%;
-width: 380px;
-height: 500px;
-  object-fit: cover; /* לוודא שהתמונה ממלאת את השטח */
+  width: 380px;
+  height: 500px;
+  object-fit: cover;
 }
 
 .course-content {
   margin-top: 3%;
-
   width: 500px;
-  /* flex: 1; */
   text-align: start;
-  /* font-size: 18px; */
 }
 
 .course-content h1 {
@@ -62,7 +41,7 @@ height: 500px;
   gap: 10px;
   margin-top: 10px;
   color: white;
-} 
+}
 
 .course-locations span {
   font-size: 16px;
@@ -70,29 +49,20 @@ height: 500px;
 
 .add-to-cart {
   font-size: 18px;
-  /* background: none; */
-background-color:   white;
-  /* border: none; */
+  background-color: white;
   cursor: pointer;
   margin-top: 20px;
 }
-
-/* .add-to-cart:hover {
-  text-decoration: underline;
-}
- */
-
-
- .add-cart {
+.add-cart {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   font-size: 18px;
   font-weight: bold;
-  background: white; /* רקע לבן */
-  color: black; /* טקסט שחור */
-  border: 2px solid black; /* מסגרת שחורה */
+  background: white;
+  color: black;
+  border: 2px solid black;
   padding: 12px 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -102,10 +72,9 @@ background-color:   white;
 }
 
 .add-cart:hover {
-  
   background: black;
   color: white;
-  transform: scale(1.05); /* הגדלה קלה */
+  transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -129,12 +98,12 @@ background-color:   white;
   left: 0;
   right: 0;
   bottom: 0;
- 
+
   z-index: 10;
   justify-content: center;
 }
 
 
-.other-color{
+.other-color {
   color: rgb(181, 154, 154);
 }
