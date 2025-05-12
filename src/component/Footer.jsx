@@ -9,7 +9,8 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <img src="../dist/images/hh.png" alt="hh" width="150px" height="120px" />
+            <p style={{color:'white',fontSize:"20px"}}>SkillHub</p>
+            {/* <img src="../dist/images/hh.png" alt="hh" width="150px" height="120px" /> */}
 
             <p className="footer-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
