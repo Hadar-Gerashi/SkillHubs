@@ -49,7 +49,7 @@ function NavBar() {
 
 
         <Toolbar disableGutters>
-          <img src="../dist/images/hh.png" alt="hh" width="150px" height="120px" />
+          <img src="../images/hh.png" alt="hh" width="150px" height="120px" />
 
           <Box sx={{ flexGrow: 1, display: "flex", height: "55px", marginTop: "-15px" }}>
             <Tabs value={currentTab} onChange={handleChange} textColor="secondary" indicatorColor="secondary" sx={{
